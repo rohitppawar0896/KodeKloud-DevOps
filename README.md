@@ -20,3 +20,10 @@
       sudo chage -E -1 username  -> To remove expiry
       sudo chage -E 2026-04-01 username  -> To set expiry to existing account
 
+## Day 3: Secure Root SSH Access
+  Disabled ssh login of root user
+  ### Command used
+    sudo vi /etc/ssh/sshd_config
+    change entry for PermitRootLogin yes to PermitRootLogin no
+    after that restart the sshd service
+    sudo systemctl restart sshd
